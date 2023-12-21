@@ -2,7 +2,7 @@ use std::{collections::HashMap, path::Path, sync::Mutex};
 
 use lazy_static::lazy_static;
 use proc_macro::TokenStream;
-use quote::{quote, quote_spanned, IdentFragment};
+use quote::{quote, quote_spanned};
 
 lazy_static! {
     static ref ICONS: Mutex<HashMap<String, String>> = Mutex::new(HashMap::new());

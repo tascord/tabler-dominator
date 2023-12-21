@@ -3,6 +3,8 @@ name = "tabler-dominator"
 license = "MIT"
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/tascord/tabler-dominator"
+description = "Tabler icons for Dominator"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
