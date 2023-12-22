@@ -46,9 +46,9 @@ fn icon_impl(item: TokenStream) -> Result<TokenStream, TokenStream> {
     let icon = ICONS.lock().unwrap();
     let icon = icon.get(&input).unwrap();
     let exp = quote! {
-        html!("svg", { .with_node!(e => {
+        html!("div", { .with_node!(e => {
                 .apply(|d| {
-                    e.set_outer_html(#icon);
+                    e.set_inner_html(&#icon);
                     d
                 })
             })

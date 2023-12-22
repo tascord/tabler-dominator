@@ -1,11 +1,15 @@
 #[cfg(test)]
 mod tests {
     use tabler_dominator::icon;
-    use dominator::{html, with_node};
+    use dominator::{html, with_node, Dom};
+    use wasm_bindgen_test::*;
 
-    #[test]
+    wasm_bindgen_test_configure!(run_in_browser);
+
+
+    #[wasm_bindgen_test]
     fn it_works() {
-        let ic = icon!("ad-2");
-        // assert_eq!(ic.to_string(), "<svg class=\"icon\"><use xlink:href=\"#ad-2\"></use></svg>");
+        let ic: Dom = icon!("ad-2");
+        web_sys::console::log_1(&format!("{:?}", ic).into());
     }
 }
